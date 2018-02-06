@@ -7,12 +7,8 @@ class Lssh < Formula
   end
   def install
     bin.install Dir['lssh']
+    system "pwd"
   end
-  postflight do
-    system_command 'echo',
-        args:["$HOME"]
-  end
-
   test do
     system "#{bin}/lssh"
   end
