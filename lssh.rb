@@ -7,8 +7,6 @@ class Lssh < Formula
   end
   def install
     bin.install Dir['lssh']
-    system "echo $HOME/.lssh.conf"
-    system "curl -s -L -o ~/.lssh.conf https://raw.githubusercontent.com/blacknon/lssh/master/example/config.tml"
   end
   test do
     system "#{bin}/lssh"
