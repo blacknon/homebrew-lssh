@@ -7,7 +7,7 @@ class Lssh < Formula
   end
   def install
     bin.install Dir['lssh']
-    system 'cp' Dir['.lssh.conf'] '~/'
+    system 'echo' Dir['.lssh.conf']
   end
   test do
     system "#{bin}/lssh"
