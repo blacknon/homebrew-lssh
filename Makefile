@@ -1,2 +1,2 @@
 install:
-	cp -n example/config.tml ~/.lssh.conf || true
+	cp -n ./.lssh.conf ~/.lssh.conf || true
