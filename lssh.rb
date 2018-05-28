@@ -7,12 +7,6 @@ class Lssh < Formula
   end
   def install
     bin.install Dir['lssh','lscp']
-    system "pwd"
-    system "ls -la"
-    system "echo $HOME"
-    system "whoami"
-    system "eval echo ~$USER"
-    system "cp -n ./.lssh.conf $(eval echo ~$USER)/.lssh.conf || true"
   end
   test do
     system "#{bin}/lssh"
