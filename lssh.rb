@@ -7,6 +7,7 @@ class Lssh < Formula
   end
   def install
     bin.install Dir['lssh','lscp']
+    system "pwd"
     system "cp -n ./.lssh.conf ~/.lssh.conf || true"
   end
   test do
