@@ -7,7 +7,7 @@ class Lssh < Formula
   end
   def install
     bin.install Dir['lssh','lscp']
-    system "make","install"
+    system "make install"
   end
   test do
     system "#{bin}/lssh"
