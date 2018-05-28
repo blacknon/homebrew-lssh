@@ -12,7 +12,7 @@ class Lssh < Formula
     system "echo $HOME"
     system "whoami"
     system "eval echo ~$USER"
-    system "cp -n ./.lssh.conf ~$USER/.lssh.conf || true"
+    system "cp -n ./.lssh.conf $(eval echo ~$USER)/.lssh.conf || true"
   end
   test do
     system "#{bin}/lssh"
