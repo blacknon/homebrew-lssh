@@ -2,8 +2,8 @@ class Lssh < Formula
   desc "List select formula ssh wrapper for terminal UI"
   homepage "https://github.com/blacknon/lssh"
   if OS.mac?
-    url "https://github.com/blacknon/lssh/releases/download/v0.5.1/lssh_0.5.1_darwin_amd64.tar.gz"
-    sha256 "a36eb785c16305efef019258cfe65effa48102e9072d8289ffc1ce18aae27297"
+    url "https://github.com/blacknon/lssh/releases/download/v0.5.2/lssh_0.5.2_darwin_amd64.tar.gz"
+    sha256 "8096095bedd16014d14be6474a35f010172c33387c491e9ac5757d99219eb505"
   end
   def install
     bin.install Dir['lssh','lscp']
