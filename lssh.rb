@@ -7,8 +7,8 @@ class Lssh < Formula
   end
   def install
     bin.install Dir['lssh','lscp']
-    zsh_completion.install "misc/completions/zsh/_lssh"
-    zsh_completion.install "misc/completions/zsh/_lscp"
+    zsh_completion.install "zsh/_lssh"
+    zsh_completion.install "zsh/_lscp"
   end
   test do
     system "#{bin}/lssh"
