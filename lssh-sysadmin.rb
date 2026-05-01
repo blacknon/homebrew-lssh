@@ -1,18 +1,19 @@
 class LsshSysadmin < Formula
   desc "Sysadmin and multiplexer binaries for lssh"
   homepage "https://github.com/blacknon/lssh"
-  version "0.9.0"
+  version "0.10.0"
 
   conflicts_with "lssh", because: "both install the lsshell, lsmux, and lspipe binaries"
+  conflicts_with "lssh-complete", because: "both install the lsshell, lsmux, and lspipe binaries"
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/blacknon/lssh/releases/download/v#{version}/lssh-sysadmin_#{version}_darwin_arm64.tar.gz"
-    sha256 "2e80ea8eb03cf438a7ed0e552289021d0396eab549c06ad3291b1ec5015ac9a2"
+    sha256 "e8438b1fc37901203380ed932761f1182bdb6c540d1239c8070c98fc3db755c0"
   end
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/blacknon/lssh/releases/download/v#{version}/lssh-sysadmin_#{version}_darwin_amd64.tar.gz"
-    sha256 "214dbdbd80ce424026f2205accf46801677023f0b56070a7672a7f6739df56f3"
+    sha256 "7b88d5cdec8f8b6ad20b68c6f1ad165febc1f6b2a135e1f1813692cb77c0c958"
   end
 
   def install

@@ -1,18 +1,19 @@
 class LsshTransfer < Formula
   desc "Transfer, diff, mount, and sync binaries for lssh"
   homepage "https://github.com/blacknon/lssh"
-  version "0.9.0"
+  version "0.10.0"
 
   conflicts_with "lssh", because: "both install the lscp, lsftp, lsdiff, lsshfs, and lssync binaries"
+  conflicts_with "lssh-complete", because: "both install the lscp, lsftp, lsdiff, lsshfs, and lssync binaries"
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/blacknon/lssh/releases/download/v#{version}/lssh-transfer_#{version}_darwin_arm64.tar.gz"
-    sha256 "86577243377edcdec872893a18a4f2f60be5039147094d7e89b7c495c098382b"
+    sha256 "22546261f09dffd690f8a7389397ca8f4ce5a39be6246546f062065eaf1c4f2d"
   end
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/blacknon/lssh/releases/download/v#{version}/lssh-transfer_#{version}_darwin_amd64.tar.gz"
-    sha256 "a8c00bd9ed8f8e61feba3148d035f17305dfa158175a8f1278b835d01a2db3c0"
+    sha256 "e4e3a2ce6d07e19c60a2310a06fb8c1e3d9bb2bcfe57a91c3bdefd1061f6a8f4"
   end
 
   def install
